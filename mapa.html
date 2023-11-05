@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+    <head>
+        <meta charset="UFT-8">
+        <title>Prometeo Mapa</title>
+        <link rel="stylesheet" href="mapa.css">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <script src=""main.js></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+        
+        <!-- Incluye D3.js -->
+        <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
+        <!-- Estilos CSS para el contenedor -->
+
+    </head>
+    
+    <body>
+        <div class="hero">
+        <video autoplay loop muted plays-inline class="backvideo" id="video-fondo">
+            <source src="20221124052445.mp4" type="video/mp4">
+        </video>
+        
+        <!-- capa trasparente -->
+        <!-- <div id="transparencia">&nbsp;
+            esto es un div vacio -->
+        </div>
+        <div id="mayor-div">
+            <div id="seccion-1" class="div-interior">
+                <nav id="menu">
+            
+                    <ul id="ul-general">
+            
+                        <li class="menus-visibles" id="myButton"><a href="">AÑADIR</a>
+                        <ul>
+                        </ul>
+            
+                        <li class="menus-visibles"><a href="">HISTORIA</a>
+                        <ul>
+                            <!-- <li class="submenu"><a href="#">Menu 1</a></li>
+                            <li class="submenu"><a href="#">Menu 2</a></li>
+                            <li class="submenu"><a href="#">Menu 3</a></li>
+                            <li class="submenu"><a href="#">Menu 4</a></li> -->
+                        </ul>
+                        </li>
+            
+                        <li class="menus-visibles"><a href="prometeo_main.html">INICIO</a>
+                        </li>
+                        
+                        <!-- <li class="menus-visibles"><a href="filosofia.html">FILOSOFÍA</a>
+                        <ul>
+                            <li class="submenu"><a href="#">Menu 1</a></li>
+                            <li class="submenu"><a href="#">Menu 2</a></li>
+                            <li class="submenu"><a href="#">Menu 3</a></li>
+                            <li class="submenu"><a href="#">Menu 4</a></li>
+                        </ul>
+                        </li> -->
+            
+                        <!-- <li class="menus-visibles"><a href="">ECONOMÍA</a>
+                        <ul>
+                            !-- <li class="submenu"><a href="#">Menu 1</a></li>
+                            <li class="submenu"><a href="#">Menu 2</a></li>
+                            <li class="submenu"><a href="#">Menu 3</a></li>
+                            <li class="submenu"><a href="#">Menu 4</a></li> --
+                        </ul>
+                        </li> -->
+            
+                        <li class="menus-visibles"><a href="">CIENCIAS NATURALES</a>
+                        <ul>
+                            <!-- <li class="submenu"><a href="#">Menu 1</a></li>
+                            <li class="submenu"><a href="#">Menu 2</a></li>
+                            <li class="submenu"><a href="#">Menu 3</a></li>
+                            <li class="submenu"><a href="#">Menu 4</a></li> -->
+                        </ul>
+                        </li>
+            
+                        <li class="menus-visibles"><a href="">CIENCIAS SOCIALES</a>
+                        </li>
+            
+                        <li class="menus-visibles"><a href="">ARTES</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <!-- div>(div[class="0001"]>ul[class="0002"]>(li[class="0003"]>a[class="0004" href="#"]{Elem $})*5)*4 -->
+            <div id="seccion-2" class="div-interior">
+                <object id="svg" data="./allSVG.svg" type="image/svg+xml"></object>
+
+                <script type="module" src="mapaCanvas.js"></script>
+            </div>
+        
+        </div>
+  
+      
+      
+      
+    <!-- <script src="mapa.js"></script> -->
+    </body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "concept": "Philosophy",
+  "children": [
+      {
+          "concept": "Metaphysics",
+          "children": [
+              {
+                  "concept": "Epistemology",
+                  "children": [
+                      {
+                          "concept": "Rationalism"
+                      },
+                      {
+                          "concept": "Empiricism"
+                      }
+                  ]
+              },
+              {
+                  "concept": "Ontology"
+              }
+          ]
+      },
+      {
+          "concept": "Ethics",
+          "children": [
+              {
+                  "concept": "Utilitarianism"
+              },
+              {
+                  "concept": "Deontology"
+              }
+          ]
+      },
+      {
+          "concept": "Aesthetics"
+      }
+  ]
+}

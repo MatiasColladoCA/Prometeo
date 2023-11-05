@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Century Gothic;/* sans-serif */
+}
+
+/* #transparencia{
+    position: absolute;
+    background-image: linear-gradient(rgba(255, 145, 0, 0.534),rgb(8, 0, 12));
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+} */
+
+.backvideo {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+}
+@media (max-aspect-ratio: 16/9){
+    .backvideo{
+        width: auto;
+        height:100%;
+    }
+}
+
+.hero{
+    text-align: center;
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#menu #ul-general{
+    background: transparent;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 0px;
+    padding-top: 10px;
+    left: 0px;
+}
+
+#ul-general ul{
+    list-style: none;
+}
+
+#menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+    transition: 0.4s;
+    display: inline-block;
+    padding-top: 10px;
+}
+#menu ul li a:hover{
+    background-image: linear-gradient(rgba(255, 255, 255, 1),rgba(0, 0, 0, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#menu ul li ul a{
+    height: 0px;
+    overflow: hidden;
+}
+
+#menu ul li:hover ul li a{
+    height: 30px;
+}
+
+#categorias{
+    position: absolute;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 90%;
+    height: 85%;
+    top: 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+}
+
+#categorias ul{
+    list-style: none;
+    text-decoration: none;
+    flex-direction: column;
+}
+
+#categorias div{
+    position: absolute;
+    width: 48%;
+    height: 46%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /* align-items: center; */
+    padding-top: 20px;
+}
+#categorias li{
+    left: 0;
+    list-style: none;
+    left: 0;
+    
+}
+#categorias a{
+    color: white;
+    text-decoration: none;
+    
+}
+#ENCICLOPEDIAS{
+    left: 0;
+    top: 0;
+}
+#CURSOS{
+    right: 0;
+    top: 0;
+}
+#DIVULGACION{
+    left: 0;
+    bottom: 0;
+}
+#otro{
+    right: 0;
+    bottom: 0;
+}
+
+
+.logos{
+    position: relative;
+    height: 20px;
+    top: 2px;
+    margin-right:5px;
+}

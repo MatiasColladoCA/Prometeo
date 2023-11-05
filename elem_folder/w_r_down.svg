@@ -1,0 +1,9 @@
+<svg width="96" height="46" viewBox="0 0 96 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="w_r_down">
+<path id="Vector 8" d="M8 7.70224H48H88" stroke="white" stroke-width="5" stroke-linecap="round"/>
+<path id="Vector 9" d="M8 7.70224V37.7022H88" stroke="white" stroke-width="5"/>
+<path id="Ellipse 11" d="M95.5 7.70224C95.5 3.5601 92.1421 0.20224 88 0.20224C83.8579 0.20224 80.5 3.5601 80.5 7.70224C80.5 11.8444 83.8579 15.2022 88 15.2022C92.1421 15.2022 95.5 11.8444 95.5 7.70224Z" fill="white"/>
+<path id="Ellipse 12" d="M95.5 37.7022C95.5 33.5601 92.1421 30.2022 88 30.2022C83.8579 30.2022 80.5 33.5601 80.5 37.7022C80.5 41.8444 83.8579 45.2022 88 45.2022C92.1421 45.2022 95.5 41.8444 95.5 37.7022Z" fill="white"/>
+<circle id="Ellipse 13" cx="7.5" cy="7.5" r="6" transform="matrix(1 0 0 -1 0.5 15.2022)" fill="white"/>
+</g>
+</svg>

@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Century Gothic;/* sans-serif */
+}
+
+#transparencia{
+    position: absolute;
+    background-image: linear-gradient(rgba(255, 145, 0, 0.534),rgb(8, 0, 12));
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.backvideo {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+}
+@media (max-aspect-ratio: 16/9){
+    .backvideo{
+        width: auto;
+        height:100%;
+    }
+}
+
+.hero{
+    /* left:50%; */
+    text-align: center;
+    width:100%;
+    height: 100vh;
+    /* background-image: transparent; */
+    /* position: relative; */
+    /* padding: 0.5; */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#menu #ul-general{
+    background: transparent;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 0px;
+    padding-top: 10px;
+}
+
+#ul-general ul{
+    list-style: none;
+    /* position: absolute;
+    display: block;
+    align-items: center;
+    justify-content: space-around; */
+}
+
+/* #ul-general ul li{
+    background: linear-gradient(180deg, rgba(8, 0, 12, 0.8),rgba(0, 0, 0, 0))
+} */
+.item {
+    flex:1
+}
+
+#mapa{
+    font-size: 25px;
+}
+
+/* primeros menús */
+.submenu{
+    margin-bottom: 10px;
+    height: 15px;
+    padding: 10px;
+}
+/* elementos de texto de la lista */
+#menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+    transition: 0.4s;
+    display: inline-block;
+}
+#menu ul li a:hover{
+    background-image: linear-gradient(rgba(255, 255, 255, 1),rgba(0, 0, 0, 0));
+    -webkit-background-clip: text;
+    /* margin-bottom: 10px; */
+    color: transparent;
+}
+
+/* Elementos en los menus ocultos */
+.submenu a{
+    height: 0px;
+    overflow: hidden;
+}
+/* este codigo recibe el click en un objeto y crea un efecto en otro interior */
+#menu ul li:hover ul li a{
+    height: 30px;
+}
+
+
+#div-prometeo{
+    background-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 30%, rgba(252, 252, 252, 0.123) 50%, rgba(0, 0, 0, 0) 70%);
+    width: 100%;
+    height: 40%;
+    display:flex;
+    align-items: center;
+}
+
+
+#prometeo{
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 1;
+    background: -webkit-linear-gradient(-90deg, #f5f5f5bd 30%, #ffffff11 60%);
+    -webkit-background-clip: text;
+    /* -webkit-text-stroke: 0px transparent; */
+    color: transparent;
+    transition: 0.5s;
+}
+#prometeo:hover{
+    
+    background: -webkit-linear-gradient(-90deg, #f5f5f5bd 30%, #ffffff11 60%);
+    -webkit-background-clip: text;
+    font-size: 110px;
+    color: transparent;
+
+    /* lo de abajo agranda la letra y la remarca con stroke blanco */
+    /* -webkit-background-clip: text;
+    color: transparent;
+    font-size: 102px;
+    -webkit-text-stroke: 2px white; */
+    
+    /* z-index: -1; */
+    /* si quito lo de abajo el background sigue en degradé. Actualmente al apoyar el mouse, el degrade se va y se queda el stroke */
+}
+
+/* cree esto para que el fade esté independiente del ul de fondo de la lista de tópicos porque en ese caso el fade se mueve con el ul */
+.fade{
+    position: absolute; top: 550px;
+    height: 40%;
+    width: 20%;
+    left: 40%;
+    background-image: linear-gradient(
+        transparent 12%,
+        currentColor 30%,
+        currentColor 70%,
+        transparent 86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-attachment: fixed;
+
+}
+.lista-topicos{
+    /* position: absolute; top: 550px;
+    height: 40%;
+    width: 20%; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    list-style: none;
+    display: inline-block;
+    text-decoration:none;
+    font-weight: 1;
+    overflow-y: scroll;
+    /* background: linear-gradient(0deg,rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.788) 50%, rgba(0, 0, 0, 0) 100%); */
+    /* background-image: linear-gradient(180deg,rgba(255, 254, 254, 0.486) 5%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0.425) 100%);
+    -webkit-background-clip: text;
+    color: transparent; */
+    /* color: transparent; */
+}
+
+/* FONDO */
+.gradient-lista-topicos{
+    position: absolute;  top: 550px;
+    top: 550px;
+    height: 40%;
+    width: 20%;
+    z-index:-1;
+    /* background-color: black; */
+}
+/* Para una ventana scroll en loop requiero js */
+
+
+
+/* .lista-topicos::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+} */
+/* 
+.lista-topicos ::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+.lista-topicos ::-webkit-scrollbar-track {
+    background: white;
+} */
+
+
+
+.lista-topicos li{
+    display: inline-block;
+    position: relative;
+    height: 30%;
+}
+
+.lista-topicos h2{
+   color:white;
+   font-weight: 1;
+}
+.burbuja-topico{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    border: 1px solid #fff;
+    padding: 2px 15px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-bottom:30px;
+    transition:0.7s;
+}
+.burbuja-topico:hover{
+    padding: 4px 18px;
+    border-radius: 55px;
+    font-size: 15px;
+
+}
+
+
+
+#box-descripcion{
+    margin-left: 100px;
+    margin-right: 250px;
+    margin-top: 400px;
+    font-size: 18px;
+    /* position: relative; top:0px; */
+    background-image: linear-gradient(to bottom,#fff,rgba(0, 0, 0, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+    background-attachment: fixed;
+}
+
+#descripcion{
+    font-size: 25px;
+}
+
+#box-instrucciones{
+    margin-left: 250px;
+    margin-right: 100px;
+    margin-top: 100px;
+    font-size: 18px;
+    /* position: absolute; right: 0px; */
+    background-image: linear-gradient(to bottom,#fff,rgba(255, 255, 255, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+    background-attachment: fixed;
+    width: 75%;
+    
+}
+
+#instrucciones{
+    text-align: right;
+    font-size: 25px;
+}
+
+#text2{
+    text-align: right;
+}
+
+
+/* SCROLLBAR */
+body{
+    overflow: overlay;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+/* deslizar y hacer aparecer los items para que prometeo tenga mas protagonismo */
+
+
+
+/* esta configuración hace que el texto sea transparente con stroke blanco y al apoyar hace un pequeño destello y aparece la letra negra con gradient stroke
+    #prometeo{
+    width: 100%;
+    text-align: center;
+    position: relative; top:0px;
+    font-size: 100px;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 1;
+    transition: 0.5s;
+}
+#prometeo:hover{
+    background: -webkit-linear-gradient(-86deg, #EEF85B 5%, #7AEC8D 53%, #09E5C3 91%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: #232d2d;
+} */
+
+/* gradiente arriba y abajo
+background-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 10%, rgb(6, 0, 15) 50%, rgba(0, 0, 0, 0) 100%); */
+
+
+
+/* figuras geometricas con gradientes que se mueven mas lento al fondo, detras de las letras */
+
+
+/* hacerlo compatible con mobiles */
+
+
+
+/* Podria hacer que debajo de "PROMETEO" exista un roll que muestre los tópicos y alguna infroamcion como usuario debatiendo o comentarios hechos, o lo mismo pero por categorias como el topico en filosofia, antropologia, sociologica, etc.. (eso podria estar configurado para el usuario) */
+
+
+/* Añadir sombra al texto o brillos o caja con animacion de reflejo */
+
+
+/* cuando apoyo mouse en menú, hay animacion de glow wave blanco */
+

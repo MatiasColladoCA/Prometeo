@@ -1,0 +1,55 @@
+{
+    "concept": "Política",
+    "children": [
+      {
+        "concept": "Gobierno",
+        "children": [
+          {
+            "concept": "Poder Ejecutivo",
+            "children": [
+              {
+                "concept": "Presidente"
+              },
+              {
+                "concept": "Vicepresidente"
+              }
+            ]
+          },
+          {
+            "concept": "Poder Legislativo",
+            "children": [
+              {
+                "concept": "Congreso"
+              },
+              {
+                "concept": "Senado"
+              }
+            ]
+          },
+          {
+            "concept": "Poder Judicial",
+            "children": [
+              {
+                "concept": "Corte Suprema"
+              },
+              {
+                "concept": "Tribunales"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "concept": "Partidos Políticos",
+        "children": [
+          {
+            "concept": "Partido A"
+          },
+          {
+            "concept": "Partido B"
+          }
+        ]
+      }
+    ]
+  }
+  

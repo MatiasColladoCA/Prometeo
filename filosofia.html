@@ -4,7 +4,8 @@
   <head>
     <meta charset="UFT-8">
     <title>Prometeo web</title>
-    <link rel="stylesheet" href="estudio4.css">
+    <link rel="stylesheet" href="filosofia.css">
+    <script src=""main.js></script>
   </head>
   
   <body>
@@ -18,8 +19,138 @@
         <!-- esto es un div vacio -->
       </div>
 
+      <nav id="menu">
+        
+        <ul id="ul-general">
+
+          <li class="menus-visibles" id="myButton"><a href="">AÑADIR</a>
+            <ul>
+            </ul>
+
+          <li class="menus-visibles"><a href="">HISTORIA</a>
+            <ul>
+              <!-- <li class="submenu"><a href="#">Menu 1</a></li>
+              <li class="submenu"><a href="#">Menu 2</a></li>
+              <li class="submenu"><a href="#">Menu 3</a></li>
+              <li class="submenu"><a href="#">Menu 4</a></li> -->
+            </ul>
+          </li>
+
+          <li class="menus-visibles"><a href="prometeo_main.html">INICIO</a>
+          </li>
+          
+          <!-- <li class="menus-visibles"><a href="filosofia.html">FILOSOFÍA</a>
+            <ul>
+              <li class="submenu"><a href="#">Menu 1</a></li>
+              <li class="submenu"><a href="#">Menu 2</a></li>
+              <li class="submenu"><a href="#">Menu 3</a></li>
+              <li class="submenu"><a href="#">Menu 4</a></li>
+            </ul>
+          </li> -->
+
+          <!-- <li class="menus-visibles"><a href="">ECONOMÍA</a>
+            <ul>
+              !-- <li class="submenu"><a href="#">Menu 1</a></li>
+              <li class="submenu"><a href="#">Menu 2</a></li>
+              <li class="submenu"><a href="#">Menu 3</a></li>
+              <li class="submenu"><a href="#">Menu 4</a></li> --
+            </ul>
+          </li> -->
+
+          <li class="menus-visibles"><a href="">CIENCIAS NATURALES</a>
+            <ul>
+              <!-- <li class="submenu"><a href="#">Menu 1</a></li>
+              <li class="submenu"><a href="#">Menu 2</a></li>
+              <li class="submenu"><a href="#">Menu 3</a></li>
+              <li class="submenu"><a href="#">Menu 4</a></li> -->
+            </ul>
+          </li>
+
+          <li class="menus-visibles"><a href="">CIENCIAS SOCIALES</a>
+          </li>
+
+          <li class="menus-visibles"><a href="">ARTES</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- div>(div[class="0001"]>ul[class="0002"]>(li[class="0003"]>a[class="0004" href="#"]{Elem $})*5)*4 -->
+      <div id="categorias">
+        <div id="ENCICLOPEDIAS">
+          <ul class="0002">
+            <li class="0003"><img src="img\sep-man-red.png" class="logos"><a href="https://plato.stanford.edu/index.html" class="0004">Stanford Encyclopedia of Philosophy</a></li>
+            <li class="0003"><img src="img\philpeople.png" class="logos"><a href="https://philpapers.org/" class="0004"> PhilPapers</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 3</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 4</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 5</a></li>
+          </ul>
+        </div>
+        <div id="CURSOS">
+          <ul class="0002">
+            <li class="0003"><a href="#" class="0004">Elem 1</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 2</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 3</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 4</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 5</a></li>
+          </ul>
+        </div>
+        <div id="DIVULGACION">
+          <ul class="0002">
+            <li class="0003"><a href="#" class="0004">Elem 1</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 2</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 3</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 4</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 5</a></li>
+          </ul>
+        </div>
+        <div id="otro">
+          <ul class="0002">
+            <li class="0003"><a href="#" class="0004">Elem 1</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 2</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 3</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 4</a></li>
+            <li class="0003"><a href="#" class="0004">Elem 5</a></li>
+          </ul>
+        </div>
+      </div>
     
-    <script>
+    <!-- <script>
+      
+      const fs = require('fs');
+      const button = document.getElementById("myButton");
+      button.addEventListener("click", funct);
+      function funct(){
+        let data = fs.readFileSync('datos.json');
+        let json = JSON.parse(data);
+        let idioma = prompt("idioma (ingles, espanol): ");
+        // let categ_dict = json[idioma][categoría];
+        let count = 0;
+        let strCateg = "";
+        for (let i ; i < json.lenghth; i++) {
+          let each_dict = json[i];
+          if("categ" in each_dict){
+            strCateg += each_dict["categ"];
+          }
+        }
+        let categ = prompt("categoría: ", strCateg);
+
+        
+        let = nombre = prompt("Nombre: ");
+        let link = prompt("link: ");
+        let = descr = prompt("descripción: ");
+        let = icono = prompt("ícono: ");
+          // for (let i = 0; i < 6; i++){
+          
+          let newLi = document.createElement("li");
+          let liText = document.createTextNode(input);
+          newLi.appendChild(liText);
+          document.getElementById("myList").appendChild(newLi);
+          
+          console.log(data);
+      }
+
+
       let menu = document.getElementById("ul-general");
       let video = document.getElementById("video-fondo");
       let transparencia = document.getElementById("transparencia");
@@ -31,10 +162,12 @@
         transparencia.style.top = value + "px";
         if (value >1){
           menu.style.background ="linear-gradient(180deg, rgba(8, 0, 12, 0.8),rgba(0, 0, 0, 0))";
-          } else {
+        }
+        else {
             menu.style.background = "none";
-          }
+        }
       })
     </script>
+       -->
   </body>
 </html>

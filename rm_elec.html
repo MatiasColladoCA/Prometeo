@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<head> 
+    <meta charset="utf-8">
+    <title>Título de la página</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <style>
+        .mermaid {
+          max-width: 100%;
+          height: auto;
+          flex-direction: row;
+        }
+
+        /* Estilo para los botones */
+		.button {
+			background-color: #6B3FA0;
+			color: #000000;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			text-align: center;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+      </style>
+</head>
+<body>
+    <nav>
+		<ul>
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Acerca de</a></li>
+			<li><a href="#">Contacto</a></li>
+			<li><button class="button" onclick="location.href='prometeo_main.html'">Volver a la página principal</button></li>
+		</ul>
+	</nav>
+
+
+    <div id="mermaid">
+        graph LR
+        A[Epistemología] --> B[Objetivos]
+        A --> C[Métodos]
+        A --> D[Tipos de conocimiento]
+        B --> E[Identificar el objeto de estudio]
+        B --> F[Definir los objetivos de investigación]
+        C --> G[Identificar la fuente de conocimiento]
+        C --> H[Diseñar el método de investigación]
+        D --> I[Conocimiento empírico]
+        D --> J[Conocimiento racional]
+        D --> K[Conocimiento intuitivo]
+        J --> L[Racionalismo]
+        J --> M[Empirismo]
+        J --> N[Constructivismo]
+        K --> O[Intuicionismo]
+        K --> P[Misticismo]
+    </div>
+
+
+    <script>
+        mermaid.initialize({
+          startOnLoad: true
+        });
+      
+        // Convierte el código mermaid en un gráfico SVG
+        mermaid.init(undefined, document.querySelectorAll('#mermaid'));
+        
+
+        const svg = d3.select("#mermaid svg");
+        const width = 800;
+        const height = 500;
+
+        // Define la separación entre los nodos
+        const tree = d3.layout.tree().nodeSize([220, 20]);
+
+        // Organiza el gráfico como un árbol de decisiones horizontal
+        const nodes = tree.nodes(svg.node().querySelector("g")).reverse();
+        const links = tree.links(nodes);
+
+        // Agrega los nodos y las líneas del árbol
+        const node = svg.selectAll("g.node")
+            .data(nodes, d => d.id || (d.id = ++i))
+            .enter().append("g")
+            .attr("class", "node")
+            .attr("transform", d => "translate(" + d.y + "," + d.x + ")");
+
+        node.append("rect")
+            .attr("width", 200)
+            .attr("height", 20)
+            .attr("rx", 10)
+            .attr("ry", 10)
+            .style("fill", "#fff")
+            .style("stroke", "#000");
+
+        node.append("text")
+            .attr("dx", 10)
+            .attr("dy", 15)
+            .text(d => d.name);
+
+        const diagonal = d3.svg.diagonal()
+            .projection(d => [d.y, d.x]);
+
+        svg.selectAll("path.link")
+            .data
+    </script>
+</body>
+</html>
